@@ -16,7 +16,9 @@ router.get('/api/walers/summary', async (req, res) => {
         )
         AS completed_walks
         FROM User u
-        LEFT JOIN 
+        LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
+        WHERE u.role = 'walker'
+        GROUP BY u.user_id
         `);
         res.json(rows);
 });
