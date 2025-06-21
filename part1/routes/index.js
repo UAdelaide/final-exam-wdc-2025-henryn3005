@@ -6,8 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/api/dogs', function(req, res) {
-  
+router.get('/api/dogs', async (req, res) => {
+
 });
 
 
