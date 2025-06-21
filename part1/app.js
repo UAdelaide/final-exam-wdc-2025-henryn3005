@@ -146,7 +146,7 @@ let db;
     if (ratingsRows[0].count === 0) {
       await db.execute(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
-        (1, '2', '2', 'Parklands', 'open'),
+        (1, '2', '2', '5', 'open'),
         (1, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
         (1, '2025-06-10 10:00:00', 20, 'Royal Lane', 'accepted'),
         (1, '2025-06-10 04:35:00', 60, 'Royal Lane', 'open'),
