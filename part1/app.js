@@ -109,8 +109,8 @@ let db;
     const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (userRows[0].count === 0) {
       await db.execute(`
-        INSERT INTO Users (owner_id, name, size) VALUES
-        (1, 'Max', 'medium'),
+        INSERT INTO Users (username, email, password_hash, role) VALUES
+        ('alice123', 'Max', 'medium'),
         (3, 'Bella', 'small'),
         (4, 'SirWoofsalot', 'large'),
         (5, 'Trousers', 'small'),
