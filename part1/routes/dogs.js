@@ -3,4 +3,6 @@ var router = express.Router();
 var db = require('../db');
 
 
-router.get('')
+router.get('api/dogs', async (req, res) => {
+    
+})
