@@ -111,10 +111,10 @@ let db;
       await db.execute(`
         INSERT INTO Users (username, email, password_hash, role) VALUES
         ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        ('bobwalker', 'bob@example.com', 'hased456', 'walker'),
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
         ('dannydonuts', 'danny@example.com', 'dandog123', 'owner'),
         ('lennylongsocks', 'lenny@example.com', 'soxcrew123', 'owner');
-        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
       `);
     }
 
