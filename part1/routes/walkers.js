@@ -16,7 +16,7 @@ router.get('/api/walkers/summary', async (req, res) => {
         WHERE wr.status = 'completed' AND wa.walker_id = u.user_id
         )
         AS completed_walks
-        FROM User u
+        FROM Users u
         LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
         WHERE u.role = 'walker'
         GROUP BY u.user_id
