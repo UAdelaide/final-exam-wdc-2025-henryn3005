@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Express</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <style>
-        body {
-            background-color: black;
-            font-size: xx-small;
-            font-style: italic;
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    body {
+      background-color: black;
+      font-size: xx-small;
+      font-style: italic;
+      color: darkgray;
+    }
 
-        }
+    button {
+      margin: 15px;
+      padding: 25px;
+      font-size: 98px;
+      background-color: black;
+      color: darkgray;
+    }
 
-        button {
-            margin: 15px;
-            padding:25px;
-            font-size: 98px;
-            background-color: black;
-        }
-        </style>
+    img {
+      width: 100%;
+      border: 10px double magenta;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="app">
     <h1>Messed up website</h1>
     <p>Sites a mess</p>
-    <script>
-        const { createApp } = Vue;
-        CreateApp({
-            data() {
-                return {
-                    dogImg: ''
-                };
-            },
-            methods: {
-            async loadDog() {
-            const res = await fetch('https://dog.ceo/api/breeds/image/random');
-            const data = await res.json();
-            this.dogImg = data.message;
-            }
-        });
 
-    </script>
+    <!-- No accessible label -->
+    <button @click="loadDog">CLICK ME FOR DOG</button>
+
+    <div v-if="dogImg">
+      <img :src="dogImg" />
+      <p style="font-size: 4px;">Dog name: Borkus Maximus</p>
+      <p style="font-size: 3px;">Breed: UNKNOWN (possibly wizard)</p>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          dogImg: ''
+        };
+      },
+      methods: {
+        async loadDog() {
+          const res = await fetch('https://dog.ceo/api/breeds/image/random');
+          const data = await res.json();
+          this.dogImg = data.message;
+        }
+      }
+    }).mount('#app');
+  </script>
 </body>
 </html>
