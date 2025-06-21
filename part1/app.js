@@ -38,7 +38,7 @@ let db;
       password: '',
       database: 'testdb'
     });
-)}
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
