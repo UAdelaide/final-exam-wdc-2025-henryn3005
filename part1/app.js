@@ -35,8 +35,8 @@ let db;
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: '',
-      database: 'testdb'
+      password: 'test123',
+      database: 'DogWalkService'
     });
 
     // Create a table if it doesn't exist
