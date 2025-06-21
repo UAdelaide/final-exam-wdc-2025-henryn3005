@@ -14,7 +14,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
         `);
         res.json(rows);
     } catch (err) {
-        res.json 
+        res.status(500).json({ error: 'failed to return'});
     }
 
 });
