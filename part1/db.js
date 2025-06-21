@@ -4,5 +4,5 @@ const db = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'test123',
-    database: ''
+    database: 'DogWalkService'
 });
