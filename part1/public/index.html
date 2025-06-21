@@ -24,6 +24,13 @@
 <body>
     <h1>Messed up website</h1>
     <p>Sites a mess</p>
-    <script></script>
+    <script>
+        const { createApp }
+        methods: {
+        async loadDog() {
+          const res = await fetch('https://dog.ceo/api/breeds/image/random');
+          const data = await res.json();
+          this.dogImg = data.message;
+    </script>
 </body>
 </html>
