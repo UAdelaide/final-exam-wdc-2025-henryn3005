@@ -9,7 +9,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.i
+app.use(session({
+    secret: 's'
+}))
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
