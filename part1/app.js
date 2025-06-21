@@ -56,7 +56,7 @@ let db;
         dog_id INT AUTO_INCREMENT PRIMARY KEY,
         owner_id INT NOT NULL,
         name VARCHAR(50) NOT NULL,
-        size ENUM('owner','walker') NUT NULL,
+        size ENUM('small','medium') NUT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `);
