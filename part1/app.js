@@ -110,8 +110,8 @@ let db;
     if (dogRows[0].count === 0) {
       await db.execute(`
         INSERT INTO Dogs (owner_id, name, size) VALUES
-        ('1984', 'George Orwell'),
-        ('To Kill a Mockingbird', 'Harper Lee'),
+        (1, 'Max', 'medium'),
+        (1, 'Max', 'medium'),
         ('Brave New World', 'Aldous Huxley')
       `);
     }
