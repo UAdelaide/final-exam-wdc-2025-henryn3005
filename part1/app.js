@@ -106,10 +106,10 @@ let db;
 
 
     // Insert data if table is empty
-    const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (userRows[0].count === 0) {
       await db.execute(`
-        INSERT INTO Dogs (owner_id, name, size) VALUES
+        INSERT INTO Users (owner_id, name, size) VALUES
         (1, 'Max', 'medium'),
         (3, 'Bella', 'small'),
         (4, 'SirWoofsalot', 'large'),
