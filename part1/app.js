@@ -134,7 +134,7 @@ let db;
     if (walkrequestsRows[0].count === 0) {
       await db.execute(`
         INSERT INTO WalkRequests (dog_id, request_time, duration_minutes, location, status) VALUES
-        (1, 'Max', 30, 'medium'),
+        (1, 'Max', 30, 'medium', 'open'),
         (3, 'Bella', 'small'),
         (4, 'SirWoofsalot', 'large'),
         (5, 'Trousers', 'small'),
