@@ -5,9 +5,7 @@ var db = require('../db');
 
 router.get('/api/walkrequests/open', async (req, res) => {
     const [rows] = await db.query(`
-        SELECT d.name AS dog_name, d.size, u.username AS owner_username
-        FROM Dogs d
-        JOIN Users u ON d.owner_id = u.user_id
+        SELECT wr.request_i
         `);
         res.json(rows);
 });
