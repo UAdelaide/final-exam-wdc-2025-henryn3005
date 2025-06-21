@@ -113,7 +113,7 @@ let db;
         ('alice123', 'alice@example.com', 'hashed123', 'owner'),
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
         ('dannydonuts', 'danny@example.com', 'dandog123', 'owner'),
-        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        ('lennylongsocks', 'lenny@example.com', 'soxcrew123', 'owner');
         ('alice123', 'alice@example.com', 'hashed123', 'owner'),
       `);
     }
