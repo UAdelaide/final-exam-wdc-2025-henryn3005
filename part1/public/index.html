@@ -34,10 +34,11 @@
             },
             methods: {
             async loadDog() {
-          const res = await fetch('https://dog.ceo/api/breeds/image/random');
-          const data = await res.json();
-          this.dogImg = data.message;
-        })
+            const res = await fetch('https://dog.ceo/api/breeds/image/random');
+            const data = await res.json();
+            this.dogImg = data.message;
+            }
+        });
 
     </script>
 </body>
