@@ -46,7 +46,7 @@ let db;
         username VARCHAR(50) UNIQUE NOT NULL,
         email VARCHAR(50) UNIQUE NOT NULL,
         password_hash VARCHAR(255) NOT NULL,
-        role ENUM('owner','walker') NUT NULL,
+        role ENUM('owner','walker') NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `);
@@ -56,7 +56,7 @@ let db;
         dog_id INT AUTO_INCREMENT PRIMARY KEY,
         owner_id INT NOT NULL,
         name VARCHAR(50) NOT NULL,
-        size ENUM('small','medium') NUT NULL,
+        size ENUM('small','medium','large') NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `);
