@@ -5,4 +5,4 @@ const db = mysql.createPool({
     user: 'root',
     password: 'test123',
     database: ''
-})
+});
