@@ -145,7 +145,7 @@ let db;
     const [ratingsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if (ratingsRows[0].count === 0) {
       await db.execute(`
-        INSERT INTO WalkRatings (dog_id, request_time, duration_minutes, location, status) VALUES
+        INSERT INTO WalkRatings (request_id, walker_id, owner_id, location, status) VALUES
         (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
         (1, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
         (1, '2025-06-10 10:00:00', 20, 'Royal Lane', 'accepted'),
