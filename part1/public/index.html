@@ -25,7 +25,14 @@
     <h1>Messed up website</h1>
     <p>Sites a mess</p>
     <script>
-        const { createApp }
+        const { createApp } = Vue;
+        CreateApp({
+            data() {
+                return {
+                    dogIMG: 
+                }
+            }
+        })
         methods: {
         async loadDog() {
           const res = await fetch('https://dog.ceo/api/breeds/image/random');
