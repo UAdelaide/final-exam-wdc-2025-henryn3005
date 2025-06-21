@@ -130,7 +130,17 @@ let db;
       `);
     }
 
-    
+    const [walkrequestsRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    if (dogRows[0].count === 0) {
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size) VALUES
+        (1, 'Max', 'medium'),
+        (3, 'Bella', 'small'),
+        (4, 'SirWoofsalot', 'large'),
+        (5, 'Trousers', 'small'),
+        (4, 'KingBarks', 'small')
+      `);
+    }
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
