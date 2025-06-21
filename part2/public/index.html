@@ -55,7 +55,11 @@
               })
             });
 
-            
+            var data = await res.json();
+
+            if (!res.ok) {
+              this.error = data.error || 
+            }
           }
         }
       }
