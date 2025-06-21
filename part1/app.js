@@ -135,9 +135,9 @@ let db;
       await db.execute(`
         INSERT INTO WalkRequests (dog_id, request_time, duration_minutes, location, status) VALUES
         (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-        (1, '2025-06-10 08:00:00', 45, 'Parklands', 'open'),
-        (1, '2025-06-10 08:00:00', 20, 'Parklands', 'open'),
-        (1, '2025-06-10 08:00:00', 60, 'Parklands', 'open'),
+        (1, '2025-06-10 08:00:00', 45, 'Beachside Ave', 'open'),
+        (1, '2025-06-10 08:00:00', 20, 'Royal Lane', 'open'),
+        (1, '2025-06-10 08:00:00', 60, '', 'open'),
         (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
       `);
     }
