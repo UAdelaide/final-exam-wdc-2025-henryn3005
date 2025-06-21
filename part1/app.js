@@ -133,7 +133,7 @@ let db;
     const [walkrequestsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
     if (walkrequestsRows[0].count === 0) {
       await db.execute(`
-        INSERT INTO WalkRequests (owner_id, name, size) VALUES
+        INSERT INTO WalkRequests (dog_id, request_time, size) VALUES
         (1, 'Max', 'medium'),
         (3, 'Bella', 'small'),
         (4, 'SirWoofsalot', 'large'),
