@@ -110,11 +110,11 @@ let db;
     if (userRows[0].count === 0) {
       await db.execute(`
         INSERT INTO Users (username, email, password_hash, role) VALUES
-        ('alice123', 'alice@example.com', 'hashed123', 'medium'),
-        (3, 'Bella', 'small'),
-        (4, 'SirWoofsalot', 'large'),
-        (5, 'Trousers', 'small'),
-        (4, 'KingBarks', 'small')
+        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
       `);
     }
 
