@@ -138,7 +138,7 @@ let db;
         (1, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
         (1, '2025-06-10 10:00:00', 20, 'Royal Lane', 'accepted'),
         (1, '2025-06-10 04:35:00', 60, 'Royal Lane', 'open'),
-        (1, '2025-07-10 09:00:00', 30, 'Mars', 'open'),
+        (1, '2025-07-10 09:00:00', 30, 'Mars', 'open')
       `);
     }
 
@@ -147,7 +147,7 @@ let db;
       await db.execute(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
         (2, 3, 2, 5, 'Great Service'),
-        (2, 3, 2, 5, 'Great Service'),
+        (3, 3, 2, 4, 'Great Service'),
         (2, 3, 2, 5, 'Great Service'),
         (2, 3, 2, 5, 'Great Service'),
         (2, 3, 2, 5, 'Great Service'),
