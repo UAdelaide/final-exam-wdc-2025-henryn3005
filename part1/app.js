@@ -114,6 +114,7 @@ let db;
         (3, 'Bella', 'small'),
         (4, 'SirWoofsalot', 'large'),
         (5, 'Trousers', 'small'),
+        (4, 'KingBarks', 'small')
       `);
     }
   } catch (err) {
