@@ -112,8 +112,8 @@ let db;
         INSERT INTO Dogs (owner_id, name, size) VALUES
         (1, 'Max', 'medium'),
         (3, 'Bella', 'small'),
-        (4, 'Max', 'medium'),
-        (1, 'Max', 'medium'),
+        (4, 'SirWoofsalot', 'large'),
+        (5, 'Trousers', 'small'),
       `);
     }
   } catch (err) {
