@@ -23,7 +23,7 @@ router.get('/api/walers/summary', async (req, res) => {
         `);
         res.json(rows);
     } catch (err) {
-        res.status(500).
+        res.status(500).json({ error: 'failed to return'});
     }
 
 });
