@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require('../db');
 
 
-router.get('/api/walers/summary', async (req, res) => {
+router.get('/api/walkers/summary', async (req, res) => {
     try {
         const [rows] = await db.query(`
         SELECT u.username AS walker_username,
