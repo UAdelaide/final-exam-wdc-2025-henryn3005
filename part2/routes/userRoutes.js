@@ -63,9 +63,9 @@ router.post('/logout', (req, res) => {
     }
 
     res.clearCookie('connect.sid');
-    return res.json({ message: 'logged out'})
-  })
-})
+    return res.json({ message: 'logged out'});
+  });
+});
 
 module.exports = router;
 
