@@ -106,6 +106,18 @@ let db;
 
 
     // Insert data if table is empty
+    const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    if (userRows[0].count === 0) {
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size) VALUES
+        (1, 'Max', 'medium'),
+        (3, 'Bella', 'small'),
+        (4, 'SirWoofsalot', 'large'),
+        (5, 'Trousers', 'small'),
+        (4, 'KingBarks', 'small')
+      `);
+    }
+
     const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
     if (dogRows[0].count === 0) {
       await db.execute(`
