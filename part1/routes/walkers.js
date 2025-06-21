@@ -13,8 +13,8 @@ router.get('/api/walers/summary', async (req, res) => {
         FROM WalkRequests wr
         JOIN WalkApplications wa ON wr.request_id = wa.request_id
         WHERE wr.status = 'completed' AND wa.walker_id = u.user_id
-        
         )
+        A
         `);
         res.json(rows);
 });
