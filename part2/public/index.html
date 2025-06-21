@@ -58,7 +58,9 @@
             var data = await res.json();
 
             if (!res.ok) {
-              this.error = data.error || 
+              this.error = data.error || 'Login failed';
+            } else {
+              
             }
           }
         }
